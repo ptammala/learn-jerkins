@@ -6,8 +6,17 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Hello World'
-                error 'Error 504'
+
             }
         }
+    }
+    post{
+    always{
+    echo 'post'
+    //send email
+    //trigger from anther job
+    //Update some jira status
+    }
+
     }
 }
