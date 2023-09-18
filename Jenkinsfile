@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo Test_URL
                 echo SSH
-                ssh 'env'
+                sh 'env'
 
             }
         }
