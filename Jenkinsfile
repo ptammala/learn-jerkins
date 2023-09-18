@@ -2,10 +2,14 @@ pipeline {
     //agent any
     agent {node { label 'workstation' }}
 
+    environment {
+    Test_URL = "google.com"
+    }
+
     stages {
         stage('Compile') {
             steps {
-                echo 'Hello World'
+                echo Test_URL
 
             }
         }
