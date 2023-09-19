@@ -15,6 +15,9 @@ pipeline {
 
                 password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
             }
+                tools {
+                    maven 'maven'
+                }
             triggers { pollSCM('*/1 * * * *') }
             //Prakash Tammala
 
