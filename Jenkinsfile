@@ -13,6 +13,7 @@ pipeline {
                 echo Test_URL
                 echo SSH
                 sh 'env'
+                sh 'ansible-playbook -i all, -m ping -e ansible_user=${SSH_USR} -e ansible_password=SSH_PSW'
 
             }
         }
