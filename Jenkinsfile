@@ -20,11 +20,6 @@ pipeline {
                 }
             triggers { pollSCM('*/1 * * * *') }
             //Prakash Tammala
-                        input {
-                            message "Should we continue?"
-                            ok "Yes, we should."
-
-                        }
 
 
 
@@ -35,6 +30,12 @@ pipeline {
 
     stages {
         stage('Compile') {
+        input {
+                                    message "Should we continue?"
+                                    ok "Yes, we should."
+
+                                }
+
             steps {
                 echo Test_URL
                 echo SSH
