@@ -34,6 +34,7 @@ pipeline {
                 echo SSH
                 sh 'env'
                 sh 'ansible -i 54.211.73.123, all  -e ansible_user=${SSH_USR} -e ansible_password=${SSH_PSW} -m ping'
+                sh 'maven version'
 
             }
         }
