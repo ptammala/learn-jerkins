@@ -18,7 +18,7 @@ pipeline {
                 tools {
                     maven 'maven'
                 }
-            triggers { pollSCM('*/1 * * * *') }
+            triggers { pollSCM('*/10 * * * *') }
             //Prakash Tammala
 
 
@@ -34,6 +34,7 @@ pipeline {
                                     message "Should we continue?"
                                     ok "Yes, we should."
 
+                                    //Prakash
                                 }
 
             steps {
