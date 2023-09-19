@@ -1,6 +1,9 @@
 pipeline {
     //agent any
     agent {node { label 'workstation' }}
+        options {
+            ansiColor('xterm')
+        }
 
     environment {
         Test_URL = "google.com"
