@@ -120,10 +120,16 @@ print "xyz in funxtion"
 node ('workstation'){
     def x = 10
     env.y = 20
-    stage('Test'){
-    print x
-    sh 'echo y - ${y}'
+    if ( x > 10 ){
+        stage('Test'){
+        print x
+        sh 'echo y - ${y}'
+        samplef()
+    }
+    }
+    else{
+    stage('Test1'){
     samplef()
-
+    }
     }
     }
