@@ -118,7 +118,7 @@ node ('workstation'){
     env.y = 20
     stage('Test'){
     print x
-    sh 'echo -y ${y}'
+    sh 'echo y - ${y}'
 
     }
     }
