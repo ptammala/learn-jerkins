@@ -30,6 +30,9 @@ pipeline {
 
     stages {
         stage('Compile') {
+                    when {
+                        branch 'production'
+                    }
         input {
                                     message "Should we continue?"
                                     ok "Yes, we should."
