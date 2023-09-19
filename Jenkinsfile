@@ -20,6 +20,12 @@ pipeline {
                 }
             triggers { pollSCM('*/1 * * * *') }
             //Prakash Tammala
+                        input {
+                            message "Should we continue?"
+                            ok "Yes, we should."
+
+                        }
+
 
 
     environment {
